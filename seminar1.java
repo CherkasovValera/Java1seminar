@@ -13,20 +13,20 @@ public class seminar1 {
             int x = 1001;
             int n = new Random().nextInt(x);
             System.out.println("Кратные " + n);
-            //if (1000-i > n){
+            
                 int[] m1Array = new int[Short.MAX_VALUE];
+                // int[] m1Array = {n};
                 for (int i = 0; j < Short.MAX_VALUE; j++) {
                     if (j % n == 0){
-                        m1Array [i] = j;//append(m1Array, i);
+                        m1Array [i] = j;
+                        // m1Array = append(m1Array, j);
+                        // System.out.print(Arrays.toString(m1Array));
                         // if ( m1Array[i] != 0){
-            //System.out.println(Arrays.toString(m1Array));
                         System.out.print(m1Array[i]+", ");
                         // }
                     }
                 }
-            //}else{
-              //  System.out.println("Таких чисел нет");
-            //}
+            
             // 4. Найти все некратные n числа в диапазоне от Short.MIN_VALUE до i и сохранить в массив m2
             // for (int s = 0; i > -1000; i--) {
             //     if (i % n == 0){
