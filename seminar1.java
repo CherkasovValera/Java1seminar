@@ -5,9 +5,9 @@ import java.util.Random;
 public class seminar1 {
     public static void main(String[] args){
         int  k = 2001;        
-        int i = new Random().nextInt(k);
-        i=i-1000;
-            System.out.println(i);
+        int j = new Random().nextInt(k);
+        j=j-1000;
+            System.out.println(j);
             // 2. Посчитать и сохранить в n номер старшего значащего бита выпавшего числа
             // 3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
             int x = 1001;
@@ -15,12 +15,12 @@ public class seminar1 {
             System.out.println("Кратные " + n);
             //if (1000-i > n){
                 int[] m1Array = new int[Short.MAX_VALUE];
-                for (int j = 0; i < Short.MAX_VALUE; i++) {
-                    if (i % n == 0){
-                        m1Array [i] = i;//append(m1Array, i);
+                for (int i = 0; j < Short.MAX_VALUE; j++) {
+                    if (j % n == 0){
+                        m1Array [i] = j;//append(m1Array, i);
                         // if ( m1Array[i] != 0){
             //System.out.println(Arrays.toString(m1Array));
-                        System.out.print(m1Array[i]+",");
+                        System.out.print(m1Array[i]+", ");
                         // }
                     }
                 }
