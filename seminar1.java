@@ -3,32 +3,29 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class seminar1 {
-    public static void main(String[] args){
-        // int  k = 2001;        
+    public static void main(String[] args){               
         int i = new Random().nextInt(-1000,1000);
-//         // j=j-1000;
-//             System.out.println(i);
-            
-//             // 2. Посчитать и сохранить в n номер старшего значащего бита выпавшего числа
-//             // 3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
-//             // int x = 1001;
-        int n = new Random().nextInt(0,1000);
+        System.out.println(i);
+// 2. Посчитать и сохранить в n номер старшего значащего бита выпавшего числа
+System.out.println("\n"+"===================================");
+        i = Math.abs(i);
+        int n = Integer.toBinaryString(i).length();
+        System.out.println(n);        
+// 3. Найти все кратные n числа в диапазоне от i до Short.MAX_VALUE сохранить в массив m1
+       
         int count = 0;
-        for (int j = i; j < Short.MAX_VALUE; j++) {
-            if (j % n == 0) {
-            System.out.printf(j + "  ");
+        for (int j = n; j < Short.MAX_VALUE; j++) {
+            if (j % n == 0) {            
                 count++;
             }
         }
             System.out.println("\n"+"=================");
             System.out.println("Числа кратные " + n + " от "+ i + " до MAX_VALUE"+"\n");            
             System.out.println("=================");
-            // System.out.println(count);
-            
+                        
             int[] m1Array = new int[count];
-            count=0;
-            // int[] m1Array = {n};
-            for (int j = i; j < Short.MAX_VALUE; j++) {
+            count=0;            
+            for (int j = n; j < Short.MAX_VALUE; j++) {
                 if (j % n == 0){
                     m1Array [count] = j;
                     count+=1;
@@ -36,26 +33,21 @@ public class seminar1 {
                     
             }
             System.out.print(Arrays.toString(m1Array));
-                //                         // System.out.print(m1Array[i]+", ");
                 
-                // }            
-                // 4. Найти все некратные n числа в диапазоне от Short.MIN_VALUE до i и сохранить в массив m2
-                
-                int z = new Random().nextInt(0,1000);
+// 4. Найти все некратные n числа в диапазоне от Short.MIN_VALUE до i и сохранить в массив m2
+                // Создаем и заполняем массив
+                // int z = new Random().nextInt(0,1000);
                 count = 0;
-                for (int j = Short.MIN_VALUE; j < z; j++) {
-                    if (j % z != 0) {
-                        // System.out.printf(j + "  ");
+                for (int j = Short.MIN_VALUE; j < n; j++) {
+                    if (j % n != 0) {                        
                         count++;
                     }
                 }
-                System.out.println("Числа кратные " + z + " от MIN_VALUE до " + i );            
+                System.out.println("Числа кратные " + n + " от MIN_VALUE до " + i );            
                 int[] m2Array = new int[count];
                 count = 0;
-                for (int j = Short.MIN_VALUE; j < z; j++) {
-                    if (j % z != 0){
-                        // m2Array [i] = j;
-                        // System.out.println(m2Array[i]+", ");
+                for (int j = Short.MIN_VALUE; j < n; j++) {
+                    if (j % n != 0){                        
                         m2Array [count] = j;
                         count++;
                     }    
@@ -84,7 +76,7 @@ public class seminar1 {
 //                 count++;
 //                 }
 //             }
-// //     // Создаем и заполняем массив
+// //     
 //             int[] m2 = new int[count];
 //             count = 0;
 //             for (int j = Short.MIN_VALUE; j < divisible; j++) {
